@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const projects = [
     {
         title: 'Quantify Pro - Invoice & Quote Generator',

@@ -1,6 +1,4 @@
-import React from 'react'
-
- const skills = [
+const skills = [
     'React & Next.js',
     'TypeScript',
     'Tailwind CSS',

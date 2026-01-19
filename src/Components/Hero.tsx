@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import heroImage from '../assets/myimage2.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
