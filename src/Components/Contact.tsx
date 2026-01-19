@@ -22,7 +22,7 @@ export default function Contact() {
         setShowLoading(true);
         e.preventDefault();
         try{
-            const res = await fetch('http://localhost:5000/message', {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/message`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

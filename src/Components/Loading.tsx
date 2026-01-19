@@ -12,7 +12,7 @@ export default function Loading({ isLoading, onClose }: LoadingProps) {
     if (!isLoading && onClose) {
       const timer = setTimeout(() => {
         onClose();
-      }, 25000); // 25 seconds
+      }, 5000); // 5 seconds
 
       return () => clearTimeout(timer);
     }
