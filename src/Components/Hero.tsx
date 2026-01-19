@@ -21,7 +21,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id='hero' className="min-h-screen flex items-center ">
+    <section id='home' className="min-h-screen flex items-center ">
       <div className="mt-40 md:mt-0 container mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT CONTENT */}

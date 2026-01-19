@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const NavItems = [
-    { name: 'Home', id: '#hero' },
+    { name: 'Home', id: '#home' },
     { name: 'About', id: '#aboutme' },
     { name: 'Projects', id: '#projects' },
     { name: 'Education', id: '#education' },
@@ -17,14 +17,14 @@ export default function Navbar() {
   return (
     <div className='fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 mb-8 border-b border-border'>
         <nav className='max-w-7xl mx-auto py-4 px-6 flex justify-between items-center '>
-            <a href="/" className='sr-only'>
-                <div >
+            <div >
+                <a href="/">
                     <h1 className='text-lg font-bold'>
-                      Dilshasn
-                    <span className='text-primary'>TM.</span></h1>
-                </div>
-            </a>
-            
+                    Dilshasn
+                    <span className='text-primary'>TM.</span>
+                </h1>
+                </a>
+            </div>
             <div className='hidden md:flex items-center gap-10'>
                 {NavItems.map((item, index)=>(
                     <a
