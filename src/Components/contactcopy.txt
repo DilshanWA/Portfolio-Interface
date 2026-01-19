@@ -1,0 +1,134 @@
+import React from 'react'
+
+export default function Contact() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  return (
+    <section id="contact" className="py-10 px-6 md:mt-0 pt-40">
+      <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT — FORM */}
+        <div>
+            <div className="mb-12 scroll-animate">
+                <p className="text-sm font-mono text-primary mb-4">
+                    {'// Projects'}
+                </p>
+                <h2 className="text-4xl md:text-5xl font-bold">
+                    My Recent
+                    <span className="text-primary"> Works</span>
+                </h2>
+            </div>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-card border border-border rounded-lg p-6 flex flex-col gap-4"
+          >
+            {/* Name & Email */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="mb-1 text-sm">
+                  Your Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="John Doe"
+                  className="py-2 px-3 rounded-md border border-border bg-transparent outline-none"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="email" className="mb-1 text-sm">
+                  Your Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="john@example.com"
+                  className="py-2 px-3 rounded-md border border-border bg-transparent outline-none"
+                />
+              </div>
+            </div>
+
+            {/* Subject */}
+            <div className="flex flex-col">
+              <label htmlFor="subject" className="mb-1 text-sm">
+                Subject
+              </label>
+              <input
+                id="subject"
+                type="text"
+                placeholder="Project Inquiry"
+                className="py-2 px-3 rounded-md border border-border bg-transparent outline-none"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col">
+              <label htmlFor="message" className="mb-1 text-sm">
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Write your message here..."
+                className="py-2 px-3 rounded-md border border-border bg-transparent outline-none resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="mt-2 bg-primary text-background px-6 py-3 rounded-md font-medium hover:scale-105 transition self-start"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        {/* RIGHT — CONTACT DETAILS */}
+        <div className="bg-card border border-border rounded-lg p-6 space-y-5">
+          <h3 className="text-2xl font-bold">
+            Contact <span className="text-primary">Details</span>
+          </h3>
+
+          <p className="text-muted-foreground">
+            Feel free to reach out for collaborations, projects, or just a friendly chat.
+          </p>
+
+          <div className="space-y-4 text-sm">
+            <div>
+              <p className="font-medium">Email</p>
+              <p className="text-muted-foreground">dilshan@example.com</p>
+            </div>
+
+            <div>
+              <p className="font-medium">Phone</p>
+              <p className="text-muted-foreground">+94 77 123 4567</p>
+            </div>
+
+            <div>
+              <p className="font-medium">Location</p>
+              <p className="text-muted-foreground">Sri Lanka</p>
+            </div>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-4 pt-4">
+            <a href="https://github.com" target="_blank" className="hover:text-primary">
+              GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank" className="hover:text-primary">
+              LinkedIn
+            </a>
+            <a href="mailto:dilshan@example.com" className="hover:text-primary">
+              Email
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+}
