@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
