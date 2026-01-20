@@ -32,7 +32,7 @@ export default function Aboutme() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           <div className="space-y-6 scroll-animate scroll-animate-delay-1 sm:text-left">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a dedicated undergraduate and versatile full-stack developer with hands-on experience spanning web and mobile applications. Proficient in modern JavaScript frameworks like React and Angular, as well as backend technologies including Python, Java, and Express.js, I build scalable and elegant solutions that prioritize user experience.
+              I am a dedicated undergraduate and versatile full-stack developer with hands-on experience spanning web and mobile applications. Proficient in modern JavaScript frameworks like Next and Angular, as well as backend technologies including Python, Java, and Express.js, I build scalable and elegant solutions that prioritize user experience.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Driven by a passion for innovation, I actively pursue growth in emerging fields such as artificial intelligence and machine learning, integrating these cutting-edge technologies into my projects. Beyond coding, I contribute to open-source communities and craft technical articles to share knowledge and refine my expertise.
