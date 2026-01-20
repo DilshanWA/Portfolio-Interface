@@ -25,7 +25,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id='education' className='py-6 px-6 md:mt-20 pt-40'>
+    <section id='education' className='py-6 px-6 md:mt-0 pt-40'>
         <div className='mx-auto max-w-7xl px-6'>
             <div className="mb-12 scroll-animate">
                 <p className="text-sm font-mono text-primary mb-4">

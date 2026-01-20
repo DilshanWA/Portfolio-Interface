@@ -60,9 +60,10 @@ export default function Aboutme() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 scroll-animate scroll-animate-delay-3 ">
           <div className="border-l-2 border-primary pl-6 py-4">
-            <p className="text-3xl font-bold text-primary mb-2">50+</p>
+            <p className="text-3xl font-bold text-primary mb-2">5+</p>
             <p className="text-sm text-muted-foreground">Projects Completed</p>
           </div>
+          {/*  
           <div className="border-l-2 border-primary pl-6 py-4">
             <p className="text-3xl font-bold text-primary mb-2">30+</p>
             <p className="text-sm text-muted-foreground">Happy Clients</p>
@@ -71,6 +72,8 @@ export default function Aboutme() {
             <p className="text-3xl font-bold text-primary mb-2">5+</p>
             <p className="text-sm text-muted-foreground">Years Experience</p>
           </div>
+          */}
+          
           <div className="border-l-2 border-primary pl-6 py-4">
             <p className="text-3xl font-bold text-primary mb-2">100%</p>
             <p className="text-sm text-muted-foreground">Dedication</p>

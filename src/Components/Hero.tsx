@@ -1,38 +1,43 @@
-import { useEffect, useState } from 'react'
 import heroImage from '../assets/myimage2.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-
+import { TypeAnimation } from 'react-type-animation';
 
 
 export default function Hero() {
-  const text = "Hello! Welcome to my portfolio"
-  const [displayedText, setDisplayedText] = useState('')
-
-  useEffect(() => {
-    let index = 0
-    const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text[index])
-      index++
-      if (index === text.length) clearInterval(interval)
-    }, 80)
-
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <section id='home' className="min-h-screen flex items-center ">
-      <div className="mt-40 md:mt-0 container mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+   <section
+        id="home"
+        className="min-h-screen flex items-center bg-cover bg-center relative"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 0, 0, 0.8), rgb(10,10,10)),
+            url('/background_image.png')
+          `,
+        }}
+      >
+
+      <div 
+      className="mt-40 md:mt-0 container mx-auto max-w-7xl px-6 grid grid-cols-1 
+      md:grid-cols-2 gap-10 items-center  animate-fadeInUp scroll-animate">
 
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
-          <p className="text-sm mb-4 text-muted-foreground">
-            // <span className="pl-2">{displayedText}</span>
+          <p className="text-[10px] pl-1 mb-4 text-muted-foreground">
+            <span className="text-primary tracking-[.2em]">
+              <TypeAnimation
+                sequence={['HELLO ! WELCOME TO MY PORTFOLIO', 2000]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
             I'm Dilshan, <br />
-            <span className="text-primary">Software Engineer</span>
+            <span className="text-primary">
+                  Software Engineer
+              </span>
           </h1>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-xl">
@@ -48,7 +53,7 @@ export default function Hero() {
               </button>
             </a>
 
-            <a href="#contact">
+            <a href="/my_cv.pdf" download={"Dilshan_CV.pdf"} target="_blank" rel="noopener noreferrer">
               <button className="border border-primary text-primary px-6 py-3 rounded-md font-medium hover:bg-primary hover:text-background hover:scale-105 transition">
                 Download CV
               </button>
