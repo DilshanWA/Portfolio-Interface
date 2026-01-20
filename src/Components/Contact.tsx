@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* CONTENT WRAPPER */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 text-white">
+      <div className="relative z-10 mx-auto max-w-7xl  text-white">
 
         {/* SECTION HEADER */}
         <div className="mb-16 scroll-animate">
