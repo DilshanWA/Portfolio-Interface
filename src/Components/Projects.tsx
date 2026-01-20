@@ -18,7 +18,7 @@ const projects = [
         image: '/project_img/cloudpdf.png',
         technologys: ['Next.js', 'Python', 'Docker','AWS', 'JWT'],
         link: 'https://github.com/DilshanWA/CloudPDF-Frontend.git',
-        live: 'https://cloudpdf.vercel.app/'
+        live: 'https://cloud-pdf-pdf-converte.vercel.app'
     },
     {
         title: 'Portfolio Website',
