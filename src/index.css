@@ -106,6 +106,13 @@
   }
 }
 
+@media (max-width: 639px) {
+  #home {
+    background-image: none !important;
+  }
+}
+
+
 /* ===================== */
 /* UTILITY CLASSES */
 /* ===================== */

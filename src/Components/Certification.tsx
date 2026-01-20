@@ -1,4 +1,5 @@
-import  { useState } from 'react'
+import  { useState,useEffect } from 'react'
+import Modal from './ModalBox'
 
 const certification = [
   {
@@ -47,6 +48,23 @@ const certification = [
 
 function Certification() {
   const [showAll, setShowAll] = useState(false)
+  const [showCertificateModal, setShowCertificateModal] = useState<number | null>(null)
+
+  
+  useEffect(() => {
+    if (showCertificateModal !== null) {
+      // Disable scroll
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Enable scroll
+      document.body.style.overflow = ''
+    }
+
+    // Cleanup on unmount or modal close
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [showCertificateModal])
 
   // Show only first 4 items initially
   const displayedCerts = showAll ? certification : certification.slice(0, 4)
@@ -69,7 +87,7 @@ function Certification() {
             {displayedCerts.map((cert, index) => (
               <div
                 key={index}
-                onClick={() => {}}
+                onClick={() => setShowCertificateModal(index)}
                 className="group cursor-pointer h-full"
               >
                 <div className="bg-card border border-border rounded-lg p-6 h-full hover:border-primary transition-colors flex flex-col">
@@ -100,7 +118,7 @@ function Certification() {
 
           {/* VIEW MORE BUTTON */}
           {certification.length > 4 && (
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-8 scroll-animate">
               <button
                 onClick={() => setShowAll(!showAll)}
                 className="px-6 py-3 rounded-md  text-primary hover:bg-primary-dark transition"
@@ -111,6 +129,59 @@ function Certification() {
           )}
         </div>
       </div>
+      {/* Modal box */}
+
+      <Modal
+        isOpen={showCertificateModal !== null}
+        onClose={() => setShowCertificateModal(null)}
+      >
+        {showCertificateModal !== null && (
+          <div className=''>
+              <div>
+                <img src={certification[showCertificateModal].image} alt={certification[showCertificateModal].title} 
+                className='w-full h-65 object-cover rounded-md'
+                />
+                <button
+                    onClick={() => setShowCertificateModal(null)}
+                    className="absolute top-4 right-4 p-2 bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors z-10"
+                >
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                </button>
+              </div>
+              <div className='p-6'>
+                <h2 className="mb-2 text-primary font-bold text-2xl">
+                  {certification[showCertificateModal].title}
+                </h2>
+                <div className='flex gap-2'>
+                  <p>Issued By: </p> <h3 className='font-bold text-primary'>{certification[showCertificateModal].issuer}</h3>
+                </div>
+                <div className="mt-4 flex gap-4 border border-border rounded-lg">
+                  <div className='p-4 w-1/2 border-r border-border'>
+                    <p>Credential ID</p>
+                    <p className='font-mono text-sm text-primary'>1234567890</p>
+                  </div>
+                  <div className='p-4 w-1/2'>
+                    <p>Issued Year</p>
+                    <p className='font-mono text-sm text-primary'>{certification[showCertificateModal].year}</p>
+                  </div>
+                </div>
+                <div className='flex flex-col md:flex-row gap-4 space-y-1 mt-6'>
+                  <a href=''
+                    className='py-3 w-full text-center font-bold px-6 bg-primary text-background rounded-md '>
+                    View Certificate
+                  </a>
+                  <a href='' className='py-3 w-full text-center font-bold px-6 bg-transparent text-primary border border-primary rounded-md'
+                    onClick = {() => setShowCertificateModal(null)}
+                  >
+                    Close
+                  </a>
+                </div>
+              </div>
+          </div>
+        )}
+      </Modal>
     </section>
   )
 }

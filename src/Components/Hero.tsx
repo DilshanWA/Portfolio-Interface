@@ -6,20 +6,16 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero() {
   return (
-   <section
-        id="home"
-        className="min-h-screen flex items-center bg-cover bg-center relative"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(0, 0, 0, 0.8), rgb(10,10,10)),
-            url('/background_image.png')
-          `,
-        }}
-      >
-
+    <section
+      id="home"
+      className="min-h-screen flex items-center bg-center relative bg-cover "
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.67), rgb(10,10,10)), url('/background_image.png')`,
+      }}
+    >
       <div 
-      className="mt-40 md:mt-0 container mx-auto max-w-7xl px-6 grid grid-cols-1 
-      md:grid-cols-2 gap-10 items-center  animate-fadeInUp scroll-animate">
+        className="mt-40 md:mt-20  lg:mt-10 container mx-auto max-w-7xl px-6 grid grid-cols-1 
+        md:grid-cols-2 gap-10 items-center  animate-fadeInUp scroll-animate">
 
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
@@ -33,7 +29,7 @@ export default function Hero() {
             </span>
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             I'm Dilshan, <br />
             <span className="text-primary">
                   Software Engineer
@@ -46,7 +42,7 @@ export default function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#projects">
               <button className="bg-primary text-background px-6 py-3 rounded-md font-medium hover:scale-105 transition">
                 View My Work

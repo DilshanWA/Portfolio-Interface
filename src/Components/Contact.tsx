@@ -47,11 +47,11 @@ export default function Contact() {
       id="contact"
       className="relative py-20 px-6 bg-cover bg-center mt-20"
       style={{
-        backgroundImage: "url('/background_image.jpg')",
+        backgroundImage: "url('/background_image2.jpg')",
       }}
     >
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* CONTENT WRAPPER */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 text-white">
