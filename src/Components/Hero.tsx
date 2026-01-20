@@ -57,15 +57,15 @@ export default function Hero() {
           </div>
           {/* social media icons */}
             <div className="flex items-center gap-6 mt-10 justify-center md:justify-start">
-                <a href=""
+                <a href="https://github.com/DilshanWA" target="_blank" rel="noopener noreferrer"
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <FaGithub size={20} className="text-muted-foreground hover:text-primary transition"/>
                 </a>
-                <a href=""
+                <a href="https://www.linkedin.com/in/dilshan-madusanka" target='_blank'
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <FaLinkedin size={20} className="text-muted-foreground hover:text-primary transition"/>
                 </a>
-                <a href=""
+                <a href="https://web.facebook.com/dilshan.thathsara.92" target="_blank"
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <FaFacebookSquare size={20} className="text-muted-foreground hover:text-primary transition"/>
                 </a>
