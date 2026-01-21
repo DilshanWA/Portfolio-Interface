@@ -1,13 +1,11 @@
 import { useState } from "react"
-import Modal from "./ModalBox"
-import { PiGithubLogoBold } from "react-icons/pi";
-import { LuRadio } from "react-icons/lu";
+import ProjectModal from "./ProjectModal";
 
 const projects = [
     {
         title: 'Quantify Pro - Invoice & Quote Generator',
         description: 'A web application that allows users to create and manage professional invoices and quotes with customizable templates and client management features.',
-        image: '/project_img/quantify.png',
+        images: ['/project_img/quantify.png'],
         technologys: ['React', 'Node.js', 'Express','Firebase'],
         link: 'https://github.com/DilshanWA/QuantifyPro.git',
         live: 'https://quantifypro.web.app/'
@@ -15,7 +13,13 @@ const projects = [
     {
         title: 'CloudPDF - Online PDF Converter',
         description: 'A cloud-based service that enables users to convert various file formats to and from PDF, with options for merging, splitting, and compressing PDF documents.',
-        image: '/project_img/cloudpdf.png',
+        images: [
+            '/project_img/cloudpdf.png',
+            '/project_img/cloudpdf2.png',
+            '/project_img/cloudpdf3.png',
+            '/project_img/cloudpdf4.png',
+            '/project_img/cloudpdf5.png'
+        ],
         technologys: ['Next.js', 'Python', 'Docker','AWS', 'JWT'],
         link: 'https://github.com/DilshanWA/CloudPDF-Frontend.git',
         live: 'https://cloud-pdf-pdf-converte.vercel.app'
@@ -23,11 +27,23 @@ const projects = [
     {
         title: 'Portfolio Website',
         description: 'A personal portfolio website showcasing my projects, skills, and experience as a software engineer, built with modern web technologies for optimal performance and responsiveness.',
-        image: '/project_img/portfolio.png',
+        images: [
+            '/project_img/portfolio.png',
+            '/project_img/portfolio2.png',
+            '/project_img/portfolio3.png'
+        ],
         technologys: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
         link: 'https://github.com/DilshanWA/Portfolio-Interface.git',
         live: 'https://dilshanthathsara.me'
     },
+    {
+        title: 'Portfolio Website',
+        description: 'A personal portfolio website showcasing my projects, skills, and experience as a software engineer, built with modern web technologies for optimal performance and responsiveness.',
+        images: ['/project_img/portfolio.png'],
+        technologys: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+        link: 'https://github.com/DilshanWA/Portfolio-Interface.git',
+        live: 'https://dilshanthathsara.me'
+    }
   
 ]
 
@@ -58,7 +74,7 @@ export default function Projects() {
                       >
                         {/* IMAGE */}
                         <div className='w-full h-50 overflow-hidden rounded-md mb-4'>
-                            <img src={project.image} alt={project.title} className='w-full h-full object-cover' />
+                            <img src={project.images[0]} alt={project.title} className='w-full h-full object-cover' />
                         </div>
                         {/* TITLE */}
                         <h3 className='text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2'>
@@ -79,7 +95,7 @@ export default function Projects() {
             </div>
             {/* VIEW MORE BUTTON */}
             {projects.length>3 &&(
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-8 scroll-animate">
               <button
                 onClick={() => setShowAll(!showAll)}
                 className="px-6 py-3 rounded-md  text-primary hover:bg-primary-dark transition"
@@ -90,77 +106,13 @@ export default function Projects() {
             )}
         </div>
         {/* PROJECT MODAL */}
-        <Modal
-            isOpen={showProjectModal !== null}
-            onClose={() => setShowProjectModal(null)}
-            >
-                {showProjectModal !== null && (
-                    <div className=''>
-                        <div>
-                            <img src={projects[showProjectModal].image} alt={projects[showProjectModal].title} />
-                            <button
-                                onClick={() => setShowProjectModal(null)}
-                                className="absolute top-4 right-4 p-2 bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors z-10"
-                                >
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="p-6">
-                             <h2 className="mb-2 text-primary font-bold text-2xl mt-4">
-                            {projects[showProjectModal].title}
-                        </h2>
-                        <p className="text-md text-muted-foreground">
-                            {projects[showProjectModal].description}
-                        </p>
-                        <div className='mt-4 gap-2'>
-                            <p>Technologies Used: </p> 
-                            <h3 className='font-bold text-primary mt-5'>
-                                {projects[showProjectModal].technologys.map((tech, idx) => (
-                                    <span
-                                        key={idx}
-                                        className="px-3 py-1 text-sm font-semibold rounded-full 
-                                                    bg-primary/10 text-primary border border-primary/30"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </h3>
-                        </div>
-                        <div className="flex flex-col sm:flex-row mt-5 gap-4">
-                            <a
-                                href={projects[showProjectModal].link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2
-                                        w-full sm:w-1/2
-                                        bg-primary text-background px-6 py-3 rounded-md
-                                        font-medium transition hover:scale-105"
-                            >
-                                <PiGithubLogoBold size={20} />
-                                View on GitHub
-                            </a>
-                            <a
-                                href={projects[showProjectModal].live}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2
-                                        w-full sm:w-1/2
-                                        bg-transparent text-primary border border-primary
-                                        px-6 py-3 rounded-md font-medium
-                                        transition hover:scale-105"
-                            >
-                                <LuRadio size={20} />
-                                Live Demo
-                            </a>
-                            </div>
-
-                        </div>
-                    </div>
-                )}
-
-        </Modal>
+        {showProjectModal !== null && (
+            <ProjectModal
+                data={displayedProjects[showProjectModal]}
+                isOpen={showProjectModal !== null}
+                onClose={() => setShowProjectModal(null)}
+            />
+        )}
         
     </section>
   )

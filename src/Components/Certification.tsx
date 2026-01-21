@@ -1,5 +1,5 @@
 import  { useState,useEffect } from 'react'
-import Modal from './ModalBox'
+import CertificateModal from './CertificateModal'
 
 const certification = [
   {
@@ -131,7 +131,7 @@ function Certification() {
       </div>
       {/* Modal box */}
 
-      <Modal
+      <CertificateModal
         isOpen={showCertificateModal !== null}
         onClose={() => setShowCertificateModal(null)}
       >
@@ -172,16 +172,16 @@ function Certification() {
                     className='py-3 w-full text-center font-bold px-6 bg-primary text-background rounded-md '>
                     View Certificate
                   </a>
-                  <a href='' className='py-3 w-full text-center font-bold px-6 bg-transparent text-primary border border-primary rounded-md'
+                  <button  className='py-3 w-full text-center font-bold px-6 bg-transparent text-primary border border-primary rounded-md'
                     onClick = {() => setShowCertificateModal(null)}
                   >
                     Close
-                  </a>
+                  </button>
                 </div>
               </div>
           </div>
         )}
-      </Modal>
+      </CertificateModal>
     </section>
   )
 }

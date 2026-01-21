@@ -1,6 +1,12 @@
 import  { useEffect } from 'react'
 
-function Modal({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) {
+interface ModalProps {
+  isOpen: boolean
+  onClose: () => void
+  children: React.ReactNode
+}
+
+function CertificateModal({ isOpen, onClose, children }: ModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -29,4 +35,4 @@ function Modal({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => 
   )
 }
 
-export default Modal
+export default CertificateModal

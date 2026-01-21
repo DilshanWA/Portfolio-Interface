@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* CONTENT WRAPPER */}
-      <div className="relative z-10 mx-auto max-w-7xl  text-white">
+      <div className="relative z-10 md:px-6 mx-auto max-w-7xl  text-white">
 
         {/* SECTION HEADER */}
         <div className="mb-16 scroll-animate">
@@ -62,7 +62,7 @@ export default function Contact() {
             {'// Contact Me'}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Get in <span className="text-primary">Touch</span>
+            Contact <span className="text-primary">Me</span>
           </h2>
         </div>
 
