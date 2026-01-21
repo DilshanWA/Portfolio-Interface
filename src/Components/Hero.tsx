@@ -1,6 +1,7 @@
 import heroImage from '../assets/myimage2.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { BsMedium } from "react-icons/bs";
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -65,6 +66,10 @@ export default function Hero() {
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <FaLinkedin size={20} className="text-muted-foreground hover:text-primary transition"/>
                 </a>
+                <a href="https://medium.com/@dilshan_tm" target="_blank"
+                className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
+                    <BsMedium size={20} className="text-muted-foreground hover:text-primary transition"/>
+                </a>
                 <a href="https://web.facebook.com/dilshan.thathsara.92" target="_blank"
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <FaFacebookSquare size={20} className="text-muted-foreground hover:text-primary transition"/>
@@ -73,7 +78,6 @@ export default function Hero() {
                 className="btn-animate btn-animate-delay-1 w-10 h-10 border border-border rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-all btn-glow">
                     <IoMdMail size={20} className="text-muted-foreground hover:text-primary transition"/>
                 </a>
-
             </div>
         </div>
         
