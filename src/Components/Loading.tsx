@@ -19,8 +19,10 @@ export default function Loading({ isLoading, onClose }: LoadingProps) {
   }, [isLoading, onClose]);
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-50 space-y-4 p-4 text-center">
-      
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/80 z-50 space-y-4 p-4 text-center">
+
+      <div className='w-full max-w-sm bg-card border border-border rounded-lg p-6 flex flex-col items-center space-y-4'>
+         
       {isLoading ? (
         <>
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
@@ -51,6 +53,7 @@ export default function Loading({ isLoading, onClose }: LoadingProps) {
           )}
         </>
       )}
+      </div>
     </div>
   );
 }

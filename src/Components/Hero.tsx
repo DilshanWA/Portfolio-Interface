@@ -11,7 +11,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center bg-center relative bg-cover "
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.67), rgb(10,10,10)), url('/background_image.png')`,
+        backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.86), rgb(10,10,10)), url('/background_image.png')`,
       }}
     >
       <div 
