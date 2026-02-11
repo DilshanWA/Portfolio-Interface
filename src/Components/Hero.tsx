@@ -10,7 +10,7 @@ export default function Hero() {
 
     const DownloadCV = async () => {
     try {
-      const response = await fetch("http://localhost:4000/download_cv");
+      const response = await fetch("https://portfolio-backend-phi-five.vercel.app/download_cv");
       if (!response.ok) throw new Error("Failed to download CV");
 
       const blob = await response.blob();
