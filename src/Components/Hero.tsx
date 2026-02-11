@@ -1,3 +1,4 @@
+import React from 'react'
 import heroImage from '../assets/myimage2.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -7,9 +8,11 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 export default function Hero() {
+  const [loading, setLoading] = React.useState(false);
 
     const DownloadCV = async () => {
     try {
+      setLoading(true);
       const response = await fetch("https://portfolio-backend-phi-five.vercel.app/download_cv");
       if (!response.ok) throw new Error("Failed to download CV");
 
@@ -24,10 +27,10 @@ export default function Hero() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("Error downloading CV:", error);
+    } finally {
+      setLoading(false);
     }
   };
-
-
 
 
   return (
@@ -77,8 +80,9 @@ export default function Hero() {
             <button
              onClick={DownloadCV}
               className="border border-primary text-primary px-6 py-3 rounded-md font-medium hover:bg-primary hover:text-background hover:scale-105 transition inline-block"
+              disabled={loading}
             >
-              Download CV
+              {loading ? "Downloading..." : "Download CV"}
             </button>
 
           </div>
