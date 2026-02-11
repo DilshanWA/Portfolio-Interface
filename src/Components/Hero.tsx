@@ -5,7 +5,31 @@ import { BsMedium } from "react-icons/bs";
 import { TypeAnimation } from 'react-type-animation';
 
 
+
 export default function Hero() {
+
+    const DownloadCV = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/download_cv");
+      if (!response.ok) throw new Error("Failed to download CV");
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Dilshan_Madusanka_CV.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error downloading CV:", error);
+    }
+  };
+
+
+
+
   return (
     <section
       id="home"
@@ -50,11 +74,13 @@ export default function Hero() {
               </button>
             </a>
 
-            <a href="/my_cv.pdf" download={"Dilshan_CV.pdf"} target="_blank" rel="noopener noreferrer">
-              <button className="border border-primary text-primary px-6 py-3 rounded-md font-medium hover:bg-primary hover:text-background hover:scale-105 transition">
-                Download CV
-              </button>
-            </a>
+            <button
+             onClick={DownloadCV}
+              className="border border-primary text-primary px-6 py-3 rounded-md font-medium hover:bg-primary hover:text-background hover:scale-105 transition inline-block"
+            >
+              Download CV
+            </button>
+
           </div>
           {/* social media icons */}
             <div className="flex items-center gap-6 mt-10 justify-center md:justify-start">
