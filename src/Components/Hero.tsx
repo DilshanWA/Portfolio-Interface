@@ -20,7 +20,7 @@ export default function Hero() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Dilshan_Madusanka_CV.pdf";
+      a.download = "Dilshan_Resume.pdf";
       document.body.appendChild(a);
       a.click();
       a.remove();
