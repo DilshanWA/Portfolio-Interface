@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <section
-      id="home"
+      id="/"
       className="min-h-screen flex items-center bg-center relative bg-cover "
       style={{
         backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.86), rgb(10,10,10)), url('/background_image.png')`,
