@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../assets/myimage2.png'
+import heroImage from '../assets/myimage3.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { BsMedium } from "react-icons/bs";
