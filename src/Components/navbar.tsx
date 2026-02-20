@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const NavItems = [
-    { name: 'Home', id: '#home' },
+    { name: 'Home', id: '/' },
     { name: 'About', id: '#aboutme' },
     { name: 'Projects', id: '#projects' },
     { name: 'Education', id: '#education' },
