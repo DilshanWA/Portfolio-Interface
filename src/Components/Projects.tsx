@@ -22,7 +22,7 @@ const projects = [
         ],
         technologys: ['Next.js', 'Python', 'Docker','AWS', 'JWT'],
         link: 'https://github.com/DilshanWA/CloudPDF-Frontend.git',
-        live: 'https://cloud-pdf-pdf-converte.vercel.app'
+        live: 'https://www.cloudpdf.app'
     },
     {
         title: 'Portfolio Website',
