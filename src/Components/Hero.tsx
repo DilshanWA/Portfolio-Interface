@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../assets/myimage7.png'
+import heroImage from '../assets/myimage8.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { BsMedium } from "react-icons/bs";
@@ -73,7 +73,7 @@ export default function Hero() {
           <div className="flex sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#projects">
               <button className="bg-primary text-background px-6 py-3 rounded-md font-medium hover:scale-105 transition">
-                View My Work
+                View My Projects
               </button>
             </a>
 
@@ -112,11 +112,11 @@ export default function Hero() {
         </div>
         
         {/* RIGHT IMAGE */}
-        <div className="h-[40vh] md:h-screen flex items-end justify-end">
+        <div className="h-[70vh] md:h-screen flex items-end justify-end">
           <img
             src={heroImage}
             alt="Dilshan"
-            className="h-50 w-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
 

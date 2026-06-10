@@ -3,6 +3,20 @@ import CertificateModal from './CertificateModal'
 
 const certification = [
   {
+    title: 'Introduction to Kubernetes',
+    issuer: 'Simplilearn',
+    year: '2026',
+    details: 'Learned the fundamentals of Kubernetes, including container orchestration and cluster management.',
+    image: '/Kubernetes.png'  // Update path accordingly
+  },
+  {
+    title: 'Maximize Productivity With AI Tools',
+    issuer: 'Google',
+    year: '2025',
+    details: 'Acquired foundational IT support skills including troubleshooting, customer service, and networking.',
+    image: '/cousera_ai.jpg'
+  },
+  {
     title: 'Software Architecture Certification',
     issuer: 'LinkedIn Learning',
     year: '2025',
@@ -24,26 +38,12 @@ const certification = [
     image: '/Python_datastructure.jpg'
   },
   {
-    title: 'Maximize Productivity With AI Tools',
-    issuer: 'Google',
-    year: '2025',
-    details: 'Acquired foundational IT support skills including troubleshooting, customer service, and networking.',
-    image: '/cousera_ai.jpg'
-  },
-  {
     title: 'Scrum Master Certification',
     issuer: 'Scrum Alliance',
     year: '2021',
     details: 'Gained knowledge in Agile methodologies and Scrum framework for effective project management.',
     image: '/softwarearchitecture.jpg'  // Update path accordingly
   },
-  {
-    title: 'Data Science Professional Certificate',
-    issuer: 'IBM',
-    year: '2022',
-    details: 'Learned data analysis, visualization, and machine learning techniques using Python and related tools.',
-    image: '/softwarearchitecture.jpg'  // Update path accordingly
-  }
 ]
 
 function Certification() {
