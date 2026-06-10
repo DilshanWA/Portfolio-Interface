@@ -6,6 +6,7 @@ const certification = [
     title: 'Introduction to Kubernetes',
     issuer: 'Simplilearn',
     year: '2026',
+    credentialId: '10257551',
     details: 'Learned the fundamentals of Kubernetes, including container orchestration and cluster management.',
     image: '/Kubernetes.png'  // Update path accordingly
   },
@@ -13,6 +14,7 @@ const certification = [
     title: 'Maximize Productivity With AI Tools',
     issuer: 'Google',
     year: '2025',
+    credentialId: '-',
     details: 'Acquired foundational IT support skills including troubleshooting, customer service, and networking.',
     image: '/cousera_ai.jpg'
   },
@@ -20,6 +22,7 @@ const certification = [
     title: 'Software Architecture Certification',
     issuer: 'LinkedIn Learning',
     year: '2025',
+    credentialId: '-',
     details: 'Learned principles and best practices for designing robust software architectures.',
     image: '/softwarearchitecture.jpg'
   },
@@ -27,6 +30,7 @@ const certification = [
     title: 'Python Basics Certification',
     issuer: 'Hackerrank',
     year: '2023',
+    credentialId: '64491c681396',
     details: 'Demonstrated proficiency in fundamental Python programming concepts and problem-solving skills.',
     image: '/python_basics.png'
   },
@@ -34,15 +38,17 @@ const certification = [
     title: 'Python Data Structures Certification',
     issuer: 'SoloLearn',
     year: '2026',
+    credentialId: '-',
     details: 'Gained knowledge of various data structures in Python and their applications in solving complex problems.',
     image: '/Python_datastructure.jpg'
   },
   {
-    title: 'Scrum Master Certification',
-    issuer: 'Scrum Alliance',
-    year: '2021',
-    details: 'Gained knowledge in Agile methodologies and Scrum framework for effective project management.',
-    image: '/softwarearchitecture.jpg'  // Update path accordingly
+    title: 'API Testing With Postman Tool ',
+    issuer: 'Coursera',
+    year: '2023',
+    credentialId: 'ZT6VJUMS6QLK',
+    details: 'Learned how to use Postman for API testing, including creating and executing test cases, and analyzing results.',
+    image: '/apipostman.png'
   },
 ]
 
@@ -160,7 +166,7 @@ function Certification() {
                 <div className="mt-4 flex gap-4 border border-border rounded-lg">
                   <div className='p-4 w-1/2 border-r border-border'>
                     <p>Credential ID</p>
-                    <p className='font-mono text-sm text-primary'>1234567890</p>
+                    <p className='font-mono text-sm text-primary'>{certification[showCertificateModal].credentialId}</p>
                   </div>
                   <div className='p-4 w-1/2'>
                     <p>Issued Year</p>
