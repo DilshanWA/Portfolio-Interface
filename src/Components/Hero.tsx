@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../assets/myimage5.png'
+import heroImage from '../assets/myimage7.png'
 import { FaGithub,FaLinkedin, FaFacebookSquare   } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { BsMedium } from "react-icons/bs";
@@ -112,11 +112,11 @@ export default function Hero() {
         </div>
         
         {/* RIGHT IMAGE */}
-        <div className="h-[70vh] md:h-screen flex items-end justify-end">
+        <div className="h-[40vh] md:h-screen flex items-end justify-end">
           <img
             src={heroImage}
             alt="Dilshan"
-            className="h-full w-full object-cover"
+            className="h-50 w-full object-cover"
           />
         </div>
 

@@ -3,14 +3,6 @@ import ProjectModal from "./ProjectModal";
 
 const projects = [
     {
-        title: 'Quantify Pro - Invoice & Quote Generator',
-        description: 'A web application that allows users to create and manage professional invoices and quotes with customizable templates and client management features.',
-        images: ['/project_img/quantify.png'],
-        technologys: ['React', 'Node.js', 'Express','Firebase'],
-        link: 'https://github.com/DilshanWA/QuantifyPro.git',
-        live: 'https://quantifypro.web.app/'
-    },
-    {
         title: 'CloudPDF - Online PDF Converter',
         description: 'A cloud-based service that enables users to convert various file formats to and from PDF, with options for merging, splitting, and compressing PDF documents.',
         images: [
@@ -23,6 +15,14 @@ const projects = [
         technologys: ['Next.js', 'Python', 'Docker','AWS', 'JWT'],
         link: 'https://github.com/DilshanWA/CloudPDF-Frontend.git',
         live: 'https://www.cloudpdf.app'
+    },
+    {
+        title: 'Quantify Pro - Invoice & Quote Generator',
+        description: 'A web application that allows users to create and manage professional invoices and quotes with customizable templates and client management features.',
+        images: ['/project_img/quantify.png'],
+        technologys: ['React', 'Node.js', 'Express','Firebase'],
+        link: 'https://github.com/DilshanWA/QuantifyPro.git',
+        live: 'https://quantifypro.web.app/'
     },
     {
         title: 'Portfolio Website',
@@ -62,7 +62,7 @@ export default function Projects() {
                 </p>
                 <h2 className="text-4xl md:text-5xl font-bold">
                     My Recent
-                    <span className="text-primary"> Works</span>
+                    <span className="text-primary"> Projects</span>
                 </h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animate'>
