@@ -47,7 +47,7 @@ export default function Contact() {
       id="contact"
       className="relative py-20 px-6 bg-cover bg-center mt-20"
       style={{
-        backgroundImage: "url('/background_image2.jpg')",
+        backgroundImage: "url('/background_image3.jpg')",
       }}
     >
       {/* DARK OVERLAY */}
